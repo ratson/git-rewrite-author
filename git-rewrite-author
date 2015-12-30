@@ -77,7 +77,7 @@ def main(args):
         rewrite_git_author(old_name, old_email, new_name, new_email)
         rewrite_git_committer(old_name, old_email, new_name, new_email)
     else:
-        print "Doing nothing.  Invoke with -h for help."
+        print("Doing nothing.  Invoke with -h for help.")
 
 
 def parse_author_arg(arg):
@@ -111,10 +111,10 @@ def list_git_authors():
     names = [u[1] for u in matches]
     unique_names = sorted(set(names))
 
-    print "The following authors and committers have contributed:"
-    print
+    print("The following authors and committers have contributed:")
+    print()
     for name in unique_names:
-        print name
+        print(name)
 
 
 if __name__ == '__main__':
